@@ -44,6 +44,10 @@
         .product-card .cta { display: inline-block; background: #667eea; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; margin-top: 15px; font-weight: 500; }
         .affiliate-label { font-size: 0.8rem; color: #666; margin-top: 5px; }
         .back { margin-bottom: 30px; }
+        .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #64748b; margin-bottom: 25px; flex-wrap: wrap; }
+        .breadcrumb a { color: #6366f1; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { color: #94a3b8; }
         .tip { background: #e8f4f8; border-left: 4px solid #667eea; padding: 15px; margin: 20px 0; }
         .warning { background: #fff3cd; border-left: 4px solid #f39c12; padding: 15px; margin: 20px 0; }
     </style>
@@ -78,10 +82,41 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mikhael0101.github.io/usefultechhub/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://mikhael0101.github.io/usefultechhub/#guides"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Best USB-C Hubs 2025"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="container">
-        <p class="back"><a href="../index.html">← Back to Home</a></p>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span>›</span>
+            <a href="../index.html#guides">Guides</a>
+            <span>›</span>
+            <span aria-current="page">USB-C Hubs</span>
+        </nav>
 
         <article>
             <h1>USB-C Hub Buying Guide</h1>
