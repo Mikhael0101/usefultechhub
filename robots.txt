@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mikhael0101.github.io/usefultechhub/sitemap.xml
