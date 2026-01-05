@@ -1,8 +1,8 @@
 #!/bin/bash
 # Amazon Affiliate Link Generator
-# Store ID: usefultechhub-21
+# Store ID: beautypro0cbb-20
 
-STORE_ID="usefultechhub-21"
+STORE_ID="beautypro0cbb-20"
 
 if [ -z "$1" ]; then
     echo "Amazon Affiliate Link Generator"
