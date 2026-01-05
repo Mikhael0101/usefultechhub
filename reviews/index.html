@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>Tech Reviews & Buying Guides - Useful Tech Hub</title>
+    <meta name="description" content="In-depth tech product reviews and buying guides. Find the best wireless earbuds, keyboards, gaming gear, monitors, and more.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mikhael0101.github.io/usefultechhub/reviews/">
+    <meta property="og:title" content="Tech Reviews & Buying Guides - Useful Tech Hub">
+    <meta property="og:description" content="In-depth tech product reviews and buying guides for all budgets.">
+    <meta property="og:site_name" content="Useful Tech Hub">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tech Reviews & Buying Guides - Useful Tech Hub">
+    <meta name="twitter:description" content="In-depth tech product reviews and buying guides for all budgets.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background: #f8fafc; }
+
+        /* Header */
+        header { background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white; padding: 20px 0; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        nav a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 24px; font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: white; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Hero */
+        .hero { text-align: center; padding: 40px 0 50px; }
+        .hero h1 { font-size: 2.5rem; color: #0f172a; margin-bottom: 16px; }
+        .hero p { font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto; }
+
+        /* Category filters */
+        .categories { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+        .category-btn { background: white; border: 1px solid #e2e8f0; padding: 10px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 500; color: #475569; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+        .category-btn:hover, .category-btn.active { background: #6366f1; color: white; border-color: #6366f1; }
+
+        /* Reviews grid */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 24px; }
+
+        .review-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .review-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .review-content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-category {
+            display: inline-block;
+            background: #eff6ff;
+            color: #3b82f6;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .review-card h2 {
+            font-size: 1.25rem;
+            color: #0f172a;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .review-card h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .review-card h2 a:hover { color: #6366f1; }
+
+        .review-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .product-count {
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        .read-more {
+            color: #6366f1;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .read-more:hover { gap: 8px; }
+        .read-more svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+        footer { background: #1e293b; color: #94a3b8; padding: 40px 20px; text-align: center; margin-top: 60px; }
+        footer a { color: #a5b4fc; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; gap: 16px; }
+            nav a { margin: 0 12px; }
+            .hero h1 { font-size: 2rem; }
+            .reviews-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">Useful Tech Hub</a>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="index.html">Reviews</a>
+                <a href="../guides/">Guides</a>
+                <a href="../blog/">Blog</a>
+                <a href="../about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Tech Reviews & Buying Guides</h1>
+            <p>Honest, research-backed reviews to help you find the best tech for your needs and budget.</p>
+        </div>
+
+        <div class="categories">
+            <a href="#" class="category-btn active">All Reviews</a>
+            <a href="#audio" class="category-btn">Audio</a>
+            <a href="#gaming" class="category-btn">Gaming</a>
+            <a href="#workspace" class="category-btn">Workspace</a>
+            <a href="#storage" class="category-btn">Storage</a>
+            <a href="#smart-home" class="category-btn">Smart Home</a>
+        </div>
+
+        <div class="reviews-grid">
+            <!-- Audio -->
+            <article class="review-card" data-category="audio">
+                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=400&fit=crop" alt="Wireless Earbuds" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Audio</span>
+                    <h2><a href="budget-wireless-earbuds.html">Best Budget Wireless Earbuds 2025</a></h2>
+                    <p>Quality wireless earbuds that won't break the bank. Our top picks for under $50 and under $100.</p>
+                    <div class="review-meta">
+                        <span class="product-count">6 products reviewed</span>
+                        <a href="budget-wireless-earbuds.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card" data-category="audio">
+                <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&h=400&fit=crop" alt="Bluetooth Speakers" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Audio</span>
+                    <h2><a href="bluetooth-speakers.html">Best Bluetooth Speakers 2025</a></h2>
+                    <p>Portable and home Bluetooth speakers with great sound quality for every budget.</p>
+                    <div class="review-meta">
+                        <span class="product-count">5 products reviewed</span>
+                        <a href="bluetooth-speakers.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card" data-category="gaming audio">
+                <img src="https://images.unsplash.com/photo-1599669454699-248893623440?w=600&h=400&fit=crop" alt="Gaming Headsets" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Gaming</span>
+                    <h2><a href="gaming-headsets.html">Best Gaming Headsets 2025</a></h2>
+                    <p>Immersive audio for gaming with clear mics for team chat. Wired and wireless options.</p>
+                    <div class="review-meta">
+                        <span class="product-count">6 products reviewed</span>
+                        <a href="gaming-headsets.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Gaming -->
+            <article class="review-card" data-category="gaming">
+                <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&h=400&fit=crop" alt="Gaming Mice" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Gaming</span>
+                    <h2><a href="gaming-mice.html">Best Gaming Mice 2025</a></h2>
+                    <p>Precision mice for competitive gaming. From budget picks to pro-level peripherals.</p>
+                    <div class="review-meta">
+                        <span class="product-count">6 products reviewed</span>
+                        <a href="gaming-mice.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Workspace -->
+            <article class="review-card" data-category="workspace">
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&h=400&fit=crop" alt="Mechanical Keyboards" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Workspace</span>
+                    <h2><a href="mechanical-keyboards-beginners.html">Best Mechanical Keyboards for Beginners</a></h2>
+                    <p>Entry-level mechanical keyboards that deliver satisfying typing without the premium price.</p>
+                    <div class="review-meta">
+                        <span class="product-count">5 products reviewed</span>
+                        <a href="mechanical-keyboards-beginners.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card" data-category="workspace">
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&h=400&fit=crop" alt="Monitors" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Workspace</span>
+                    <h2><a href="monitors-desk-setup.html">Best Monitors & Desk Setup 2025</a></h2>
+                    <p>Monitors for productivity, gaming, and creative work. Plus desk setup essentials.</p>
+                    <div class="review-meta">
+                        <span class="product-count">6 products reviewed</span>
+                        <a href="monitors-desk-setup.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card" data-category="workspace">
+                <img src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=600&h=400&fit=crop" alt="Webcams and Microphones" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Workspace</span>
+                    <h2><a href="webcams-microphones.html">Best Webcams & Microphones 2025</a></h2>
+                    <p>Look and sound professional on video calls. Top picks for remote work and streaming.</p>
+                    <div class="review-meta">
+                        <span class="product-count">6 products reviewed</span>
+                        <a href="webcams-microphones.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card" data-category="workspace">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop" alt="Office Chairs" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Workspace</span>
+                    <h2><a href="office-chairs.html">Best Office Chairs 2025</a></h2>
+                    <p>Ergonomic chairs for all-day comfort. Budget-friendly to premium options.</p>
+                    <div class="review-meta">
+                        <span class="product-count">5 products reviewed</span>
+                        <a href="office-chairs.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card" data-category="workspace">
+                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=600&h=400&fit=crop" alt="Laptop Stands" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Workspace</span>
+                    <h2><a href="laptop-stands-accessories.html">Best Laptop Stands & Accessories 2025</a></h2>
+                    <p>Elevate your laptop for better ergonomics. Stands, docks, and essential accessories.</p>
+                    <div class="review-meta">
+                        <span class="product-count">5 products reviewed</span>
+                        <a href="laptop-stands-accessories.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card" data-category="workspace">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop" alt="Ring Lights" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Workspace</span>
+                    <h2><a href="ring-lights-streaming.html">Best Ring Lights for Streaming 2025</a></h2>
+                    <p>Professional lighting for video calls, streaming, and content creation.</p>
+                    <div class="review-meta">
+                        <span class="product-count">5 products reviewed</span>
+                        <a href="ring-lights-streaming.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Storage -->
+            <article class="review-card" data-category="storage">
+                <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600&h=400&fit=crop" alt="External SSDs" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Storage</span>
+                    <h2><a href="external-ssds.html">Best External SSDs 2025</a></h2>
+                    <p>Fast, portable storage for backups, gaming, and file transfers.</p>
+                    <div class="review-meta">
+                        <span class="product-count">5 products reviewed</span>
+                        <a href="external-ssds.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="review-card" data-category="storage">
+                <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=600&h=400&fit=crop" alt="Portable Chargers" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Storage</span>
+                    <h2><a href="portable-chargers-power-banks.html">Best Portable Chargers & Power Banks 2025</a></h2>
+                    <p>Keep your devices charged on the go. Compact to high-capacity options.</p>
+                    <div class="review-meta">
+                        <span class="product-count">6 products reviewed</span>
+                        <a href="portable-chargers-power-banks.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Smart Home -->
+            <article class="review-card" data-category="smart-home">
+                <img src="https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=600&h=400&fit=crop" alt="Smart Plugs" loading="lazy">
+                <div class="review-content">
+                    <span class="review-category">Smart Home</span>
+                    <h2><a href="smart-plugs-home.html">Best Smart Plugs 2025</a></h2>
+                    <p>Automate your home the easy way. Voice control and scheduling for any outlet.</p>
+                    <div class="review-meta">
+                        <span class="product-count">5 products reviewed</span>
+                        <a href="smart-plugs-home.html" class="read-more">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Useful Tech Hub. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            <a href="../disclosure.html">Affiliate Disclosure</a> ·
+            <a href="../privacy.html">Privacy Policy</a> ·
+            <a href="../terms.html">Terms of Service</a> ·
+            <a href="../about.html">About</a>
+        </p>
+    </footer>
+</body>
+</html>
