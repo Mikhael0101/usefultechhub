@@ -31,14 +31,14 @@ body {
 }
 
 /* Force header and footer containers to always be 1200px regardless of page styles */
-.site-header .container,
-.site-footer .container {
+header .container,
+footer .container {
     max-width: 1200px !important;
     padding: 0 24px !important;
 }
 
 /* Header */
-.site-header {
+header {
     background: var(--secondary);
     padding: 16px 0;
     position: sticky;
@@ -89,12 +89,12 @@ body {
     font-weight: 500;
 }
 
-.main-nav {
+nav {
     display: flex;
     gap: 32px;
 }
 
-.main-nav a {
+nav a {
     color: #cbd5e1;
     text-decoration: none;
     font-size: 0.9rem;
@@ -102,8 +102,8 @@ body {
     transition: color 0.2s;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
+nav a:hover,
+nav a.active {
     color: white;
 }
 
@@ -123,7 +123,7 @@ body {
 }
 
 /* Footer */
-.site-footer {
+footer {
     background: var(--secondary);
     padding: 64px 0 32px;
     margin-top: 60px;
@@ -203,7 +203,7 @@ body {
 /* Responsive */
 @media (max-width: 968px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
-    .main-nav { display: none; }
+    nav { display: none; }
     .mobile-menu-btn { display: block; }
 }
 
