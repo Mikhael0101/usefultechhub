@@ -121,6 +121,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mikhael0101.github.io/usefultechhub/guides/</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://mikhael0101.github.io/usefultechhub/guides/usb-c-hubs.html</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>Buying Guides - Useful Tech Hub</title>
+    <meta name="description" content="In-depth buying guides to help you choose the right tech products. Expert advice on what to look for before you buy.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mikhael0101.github.io/usefultechhub/guides/">
+    <meta property="og:title" content="Buying Guides - Useful Tech Hub">
+    <meta property="og:description" content="In-depth buying guides to help you choose the right tech products.">
+    <meta property="og:site_name" content="Useful Tech Hub">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Buying Guides - Useful Tech Hub">
+    <meta name="twitter:description" content="In-depth buying guides to help you choose the right tech products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background: #f8fafc; }
+
+        /* Header */
+        header { background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white; padding: 20px 0; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
+        nav a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 24px; font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: white; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Hero */
+        .hero { text-align: center; padding: 40px 0 50px; }
+        .hero h1 { font-size: 2.5rem; color: #0f172a; margin-bottom: 16px; }
+        .hero p { font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto; }
+
+        /* Info box */
+        .info-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+            border: 1px solid #c7d2fe;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .info-box svg {
+            width: 48px;
+            height: 48px;
+            stroke: #6366f1;
+            fill: none;
+            stroke-width: 1.5;
+            flex-shrink: 0;
+        }
+        .info-box-content h3 { color: #3730a3; margin-bottom: 4px; font-size: 1.1rem; }
+        .info-box-content p { color: #4338ca; margin: 0; font-size: 0.95rem; }
+
+        /* Guides grid */
+        .guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 24px; }
+
+        .guide-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .guide-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .guide-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .guide-content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guide-type {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+        .guide-type svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .guide-card h2 {
+            font-size: 1.35rem;
+            color: #0f172a;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .guide-card h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .guide-card h2 a:hover { color: #6366f1; }
+
+        .guide-card p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .guide-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .guide-feature {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .guide-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .read-time {
+            color: #64748b;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .read-time svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .read-guide {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .read-guide:hover { transform: translateX(4px); box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4); }
+        .read-guide svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+        /* Coming soon section */
+        .coming-soon {
+            margin-top: 60px;
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            border: 2px dashed #e2e8f0;
+        }
+        .coming-soon h3 { color: #64748b; font-size: 1.2rem; margin-bottom: 12px; }
+        .coming-soon p { color: #94a3b8; max-width: 500px; margin: 0 auto; }
+
+        footer { background: #1e293b; color: #94a3b8; padding: 40px 20px; text-align: center; margin-top: 60px; }
+        footer a { color: #a5b4fc; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; gap: 16px; }
+            nav a { margin: 0 12px; }
+            .hero h1 { font-size: 2rem; }
+            .guides-grid { grid-template-columns: 1fr; }
+            .info-box { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">Useful Tech Hub</a>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="../reviews/">Reviews</a>
+                <a href="index.html">Guides</a>
+                <a href="../blog/">Blog</a>
+                <a href="../about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Buying Guides</h1>
+            <p>Comprehensive guides to help you understand what features matter and make smarter purchasing decisions.</p>
+        </div>
+
+        <div class="info-box">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <div class="info-box-content">
+                <h3>What's the difference between Reviews and Guides?</h3>
+                <p>Reviews recommend specific products. Guides teach you what to look for so you can evaluate any product yourself.</p>
+            </div>
+        </div>
+
+        <div class="guides-grid">
+            <article class="guide-card">
+                <img src="https://images.unsplash.com/photo-1625723044792-44de16ccb4e9?w=600&h=440&fit=crop" alt="USB-C Hubs" loading="lazy">
+                <div class="guide-content">
+                    <span class="guide-type">
+                        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Buying Guide
+                    </span>
+                    <h2><a href="usb-c-hubs.html">USB-C Hubs: The Complete Buying Guide</a></h2>
+                    <p>Everything you need to know about USB-C hubs and docking stations. Understand ports, power delivery, compatibility, and what to look for.</p>
+                    <div class="guide-features">
+                        <span class="guide-feature">Port Types Explained</span>
+                        <span class="guide-feature">Power Delivery</span>
+                        <span class="guide-feature">Compatibility</span>
+                        <span class="guide-feature">Recommendations</span>
+                    </div>
+                    <div class="guide-meta">
+                        <span class="read-time">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            8 min read
+                        </span>
+                        <a href="usb-c-hubs.html" class="read-guide">Read Guide <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="coming-soon">
+            <h3>More Guides Coming Soon</h3>
+            <p>We're working on comprehensive buying guides for monitors, mechanical keyboards, audio equipment, and more. Check back soon!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Useful Tech Hub. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            <a href="../disclosure.html">Affiliate Disclosure</a> ·
+            <a href="../privacy.html">Privacy Policy</a> ·
+            <a href="../terms.html">Terms of Service</a> ·
+            <a href="../about.html">About</a>
+        </p>
+    </footer>
+</body>
+</html>
