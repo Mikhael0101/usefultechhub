@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>How to Optimize Windows for Gaming - Useful Tech Hub</title>
+    <meta name="description" content="Free tweaks and settings to boost gaming performance on Windows 10/11. No software needed, just built-in settings.">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mikhael0101.github.io/usefultechhub/blog/optimize-windows-gaming.html">
+    <meta property="og:title" content="How to Optimize Windows for Gaming">
+    <meta property="og:description" content="Free tweaks to boost gaming performance on Windows.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=1200&h=630&fit=crop">
+    <meta property="og:site_name" content="Useful Tech Hub">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #333; background: #f8fafc; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 2.25rem; margin-bottom: 10px; color: #0f172a; }
+        .meta { color: #64748b; margin-bottom: 30px; font-size: 0.9rem; }
+        h2 { margin: 45px 0 20px; color: #1e293b; font-size: 1.5rem; }
+        h3 { margin: 30px 0 15px; color: #334155; font-size: 1.2rem; }
+        p { margin-bottom: 16px; color: #475569; }
+        a { color: #6366f1; }
+        ul, ol { margin: 16px 0 16px 24px; color: #475569; }
+        li { margin-bottom: 8px; }
+        .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: #64748b; margin-bottom: 25px; flex-wrap: wrap; }
+        .breadcrumb a { color: #6366f1; text-decoration: none; }
+        .breadcrumb span { color: #94a3b8; }
+        .tip { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 16px 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+        .warning { background: #fef2f2; border-left: 4px solid #ef4444; padding: 16px 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+        .step { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .step h3 { margin-top: 0; color: #6366f1; }
+        .step code { background: #1e293b; color: #22d3ee; padding: 12px 16px; border-radius: 6px; display: block; margin: 12px 0; font-family: monospace; overflow-x: auto; }
+        .related-posts { margin-top: 50px; padding-top: 30px; border-top: 2px solid #e2e8f0; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .related-card { background: white; border-radius: 8px; padding: 16px; border: 1px solid #e2e8f0; }
+        .related-card h4 { margin: 0 0 8px; }
+        .related-card h4 a { color: #6366f1; text-decoration: none; }
+        .related-card p { margin: 0; font-size: 0.9rem; color: #64748b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span>›</span>
+            <a href="index.html">Blog</a>
+            <span>›</span>
+            <span aria-current="page">Optimize Windows for Gaming</span>
+        </nav>
+
+        <article>
+            <h1>How to Optimize Windows for Gaming</h1>
+            <p class="meta">January 2, 2026 · 7 min read · By Tech Team</p>
+
+            <p>You don't need expensive software to optimize Windows for gaming. These free built-in settings can noticeably improve performance, reduce input lag, and eliminate stuttering.</p>
+
+            <div class="tip">
+                <strong>Note:</strong> These tips work for Windows 10 and 11. Create a system restore point before making changes.
+            </div>
+
+            <h2>1. Enable Game Mode</h2>
+            <div class="step">
+                <h3>Windows Game Mode</h3>
+                <p>Game Mode prioritizes system resources for games and prevents Windows Update from installing drivers mid-game.</p>
+                <code>Settings → Gaming → Game Mode → On</code>
+            </div>
+
+            <h2>2. Disable Hardware-Accelerated GPU Scheduling (Test Both)</h2>
+            <div class="step">
+                <h3>GPU Scheduling</h3>
+                <p>This feature can help or hurt depending on your hardware. Test with it on and off.</p>
+                <code>Settings → System → Display → Graphics → Change default graphics settings</code>
+                <p>Toggle "Hardware-accelerated GPU scheduling" and test your games.</p>
+            </div>
+
+            <h2>3. Set High Performance Power Plan</h2>
+            <div class="step">
+                <h3>Power Plan</h3>
+                <p>Balanced mode throttles CPU/GPU to save power. High Performance removes these limits.</p>
+                <code>Control Panel → Power Options → High Performance</code>
+                <p>If you don't see High Performance, click "Create a power plan" or run:</p>
+                <code>powercfg -duplicatescheme 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</code>
+            </div>
+
+            <h2>4. Disable Fullscreen Optimizations</h2>
+            <div class="step">
+                <h3>For Each Game</h3>
+                <p>Windows' fullscreen optimizations can add input lag. Disable per-game:</p>
+                <ol>
+                    <li>Right-click game .exe → Properties</li>
+                    <li>Compatibility tab</li>
+                    <li>Check "Disable fullscreen optimizations"</li>
+                    <li>Click Apply</li>
+                </ol>
+            </div>
+
+            <h2>5. Update Graphics Drivers</h2>
+            <div class="step">
+                <h3>Get Latest Drivers</h3>
+                <p>Don't use Windows Update for GPU drivers. Get them direct from:</p>
+                <ul>
+                    <li><strong>NVIDIA:</strong> GeForce Experience or nvidia.com</li>
+                    <li><strong>AMD:</strong> AMD Adrenalin or amd.com</li>
+                    <li><strong>Intel:</strong> Intel Driver Support Assistant</li>
+                </ul>
+            </div>
+
+            <h2>6. Disable Background Apps</h2>
+            <div class="step">
+                <h3>Stop Background Bloat</h3>
+                <p>Windows 11:</p>
+                <code>Settings → Apps → Installed apps → [App] → Advanced options → Background permissions: Never</code>
+                <p>Windows 10:</p>
+                <code>Settings → Privacy → Background apps → Toggle off apps you don't need</code>
+            </div>
+
+            <h2>7. Disable Xbox Game Bar</h2>
+            <div class="step">
+                <h3>Remove Overlay Overhead</h3>
+                <p>If you don't use it, disable it:</p>
+                <code>Settings → Gaming → Xbox Game Bar → Off</code>
+                <code>Settings → Gaming → Captures → Record in background → Off</code>
+            </div>
+
+            <h2>8. Set GPU Preference Per Game</h2>
+            <div class="step">
+                <h3>Force Dedicated GPU</h3>
+                <p>Ensure games use your dedicated GPU, not integrated graphics:</p>
+                <code>Settings → System → Display → Graphics</code>
+                <p>Add your game and set to "High performance"</p>
+            </div>
+
+            <h2>9. Disable Startup Programs</h2>
+            <div class="step">
+                <h3>Clean Boot</h3>
+                <p>Fewer programs running = more resources for games:</p>
+                <code>Ctrl+Shift+Esc → Startup tab → Disable unnecessary apps</code>
+            </div>
+
+            <h2>10. Enable Ultimate Performance (Desktop Only)</h2>
+            <div class="step">
+                <h3>Hidden Power Plan</h3>
+                <p>More aggressive than High Performance. Run in admin PowerShell:</p>
+                <code>powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61</code>
+                <p>Then select "Ultimate Performance" in Power Options.</p>
+            </div>
+
+            <div class="warning">
+                <strong>Warning:</strong> Ultimate Performance uses more power and generates more heat. Only use on desktops with good cooling.
+            </div>
+
+            <h2>What Won't Help</h2>
+            <ul>
+                <li><strong>"Gaming" RAM cleaner software</strong> – Windows manages RAM fine</li>
+                <li><strong>Registry "tweaks"</strong> – Risk outweighs minimal benefit</li>
+                <li><strong>Disabling Windows services</strong> – Can cause instability</li>
+                <li><strong>Third-party "optimization" software</strong> – Usually bloatware</li>
+            </ul>
+
+            <h2>The Biggest Impact</h2>
+            <p>Honestly? Hardware matters most. If you're still struggling after these tweaks:</p>
+            <ul>
+                <li>Add more RAM (16GB minimum for modern games)</li>
+                <li>Upgrade to an SSD if you're on a hard drive</li>
+                <li>Consider a GPU upgrade</li>
+            </ul>
+
+            <div class="related-posts">
+                <h2>Related Articles</h2>
+                <div class="related-grid">
+                    <div class="related-card">
+                        <h4><a href="../reviews/gaming-mice.html">Best Gaming Mice 2025</a></h4>
+                        <p>Precision mice for competitive gaming</p>
+                    </div>
+                    <div class="related-card">
+                        <h4><a href="../reviews/gaming-headsets.html">Best Gaming Headsets 2025</a></h4>
+                        <p>Immersive audio for gaming</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>Tech Blog - Useful Tech Hub</title>
+    <meta name="description" content="Tech tips, tutorials, and insights to help you get the most out of your gadgets and gear.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mikhael0101.github.io/usefultechhub/blog/">
+    <meta property="og:title" content="Tech Blog - Useful Tech Hub">
+    <meta property="og:description" content="Tech tips, tutorials, and insights to help you get the most out of your gadgets and gear.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop">
+    <meta property="og:site_name" content="Useful Tech Hub">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mikhael0101.github.io/usefultechhub/blog/">
+    <meta name="twitter:title" content="Tech Blog - Useful Tech Hub">
+    <meta name="twitter:description" content="Tech tips, tutorials, and insights to help you get the most out of your gadgets and gear.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #333; background: #f8fafc; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Header */
+        .header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 60px 0; margin-bottom: 40px; }
+        .header h1 { color: white; font-size: 2.5rem; margin-bottom: 10px; }
+        .header p { color: #94a3b8; font-size: 1.1rem; }
+        .header .container { padding: 0 20px; }
+
+        /* Navigation */
+        .back { margin-bottom: 30px; }
+        .back a { color: #6366f1; text-decoration: none; font-weight: 500; }
+        .back a:hover { text-decoration: underline; }
+
+        /* Blog Grid */
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+
+        .blog-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+        .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+        .blog-card img { width: 100%; height: 200px; object-fit: cover; }
+        .blog-card-content { padding: 24px; }
+        .blog-card .category { display: inline-block; background: #eff6ff; color: #3b82f6; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500; margin-bottom: 12px; }
+        .blog-card h2 { font-size: 1.25rem; margin-bottom: 12px; color: #0f172a; }
+        .blog-card h2 a { color: inherit; text-decoration: none; }
+        .blog-card h2 a:hover { color: #6366f1; }
+        .blog-card p { color: #64748b; font-size: 0.95rem; margin-bottom: 16px; }
+        .blog-card .meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #94a3b8; }
+
+        /* Footer link */
+        .view-all { text-align: center; margin-top: 40px; }
+        .view-all a { color: #6366f1; text-decoration: none; font-weight: 600; }
+
+        @media (max-width: 640px) {
+            .header h1 { font-size: 2rem; }
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <p class="back" style="margin-bottom: 20px;"><a href="../index.html" style="color: #94a3b8;">← Back to Home</a></p>
+            <h1>Tech Blog</h1>
+            <p>Tips, tutorials, and insights to level up your tech game</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&h=400&fit=crop" alt="Mechanical Keyboard">
+                <div class="blog-card-content">
+                    <span class="category">Guide</span>
+                    <h2><a href="how-to-clean-mechanical-keyboard.html">How to Clean Your Mechanical Keyboard</a></h2>
+                    <p>Step-by-step guide to deep cleaning your keyboard and keeping it in top condition.</p>
+                    <div class="meta">
+                        <span>5 min read</span>
+                        <span>Jan 5, 2026</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Home Office Setup">
+                <div class="blog-card-content">
+                    <span class="category">Tips</span>
+                    <h2><a href="work-from-home-setup-guide.html">The Ultimate Work From Home Setup Guide</a></h2>
+                    <p>Everything you need to create a productive and comfortable home office.</p>
+                    <div class="meta">
+                        <span>8 min read</span>
+                        <span>Jan 4, 2026</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop" alt="USB-C Cables">
+                <div class="blog-card-content">
+                    <span class="category">Explainer</span>
+                    <h2><a href="usb-c-cables-explained.html">USB-C Cables Explained: Not All Cables Are Equal</a></h2>
+                    <p>Why your USB-C cable matters and how to choose the right one for your devices.</p>
+                    <div class="meta">
+                        <span>6 min read</span>
+                        <span>Jan 3, 2026</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&h=400&fit=crop" alt="Gaming Setup">
+                <div class="blog-card-content">
+                    <span class="category">Gaming</span>
+                    <h2><a href="optimize-windows-gaming.html">How to Optimize Windows for Gaming</a></h2>
+                    <p>Free tweaks and settings to boost your gaming performance without spending a dime.</p>
+                    <div class="meta">
+                        <span>7 min read</span>
+                        <span>Jan 2, 2026</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1558618047-f4b511d0a0e7?w=600&h=400&fit=crop" alt="Monitor Calibration">
+                <div class="blog-card-content">
+                    <span class="category">Tutorial</span>
+                    <h2><a href="calibrate-monitor-for-free.html">How to Calibrate Your Monitor for Free</a></h2>
+                    <p>Get accurate colors without expensive calibration tools using these free methods.</p>
+                    <div class="meta">
+                        <span>5 min read</span>
+                        <span>Jan 1, 2026</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?w=600&h=400&fit=crop" alt="SSD vs HDD">
+                <div class="blog-card-content">
+                    <span class="category">Explainer</span>
+                    <h2><a href="ssd-vs-hdd-which-to-buy.html">SSD vs HDD: Which Should You Buy in 2026?</a></h2>
+                    <p>Breaking down the pros, cons, and use cases for solid state and hard disk drives.</p>
+                    <div class="meta">
+                        <span>6 min read</span>
+                        <span>Dec 30, 2025</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+</html>
