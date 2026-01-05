@@ -85,7 +85,7 @@
 
         .guide-card img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
         }
 
@@ -120,7 +120,7 @@
         }
 
         .guide-card h2 {
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             color: #0f172a;
             margin-bottom: 12px;
             line-height: 1.4;
@@ -192,18 +192,6 @@
         .read-guide:hover { transform: translateX(4px); box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4); }
         .read-guide svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
 
-        /* Coming soon section */
-        .coming-soon {
-            margin-top: 60px;
-            text-align: center;
-            padding: 40px;
-            background: white;
-            border-radius: 12px;
-            border: 2px dashed #e2e8f0;
-        }
-        .coming-soon h3 { color: #64748b; font-size: 1.2rem; margin-bottom: 12px; }
-        .coming-soon p { color: #94a3b8; max-width: 500px; margin: 0 auto; }
-
         footer { background: #1e293b; color: #94a3b8; padding: 40px 20px; text-align: center; margin-top: 60px; }
         footer a { color: #a5b4fc; text-decoration: none; }
 
@@ -245,17 +233,122 @@
         </div>
 
         <div class="guides-grid">
+            <!-- Mechanical Keyboards -->
             <article class="guide-card">
-                <img src="https://images.unsplash.com/photo-1625723044792-44de16ccb4e9?w=600&h=440&fit=crop" alt="USB-C Hubs" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&h=400&fit=crop" alt="Mechanical Keyboards" loading="lazy">
+                <div class="guide-content">
+                    <span class="guide-type">
+                        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Buying Guide
+                    </span>
+                    <h2><a href="mechanical-keyboards.html">Mechanical Keyboards: Switches, Sizes & Features</a></h2>
+                    <p>Everything you need to know about mechanical keyboards. Understand switch types, layouts, and what features actually matter.</p>
+                    <div class="guide-features">
+                        <span class="guide-feature">Switch Types</span>
+                        <span class="guide-feature">Keyboard Sizes</span>
+                        <span class="guide-feature">Hot-Swap</span>
+                        <span class="guide-feature">Recommendations</span>
+                    </div>
+                    <div class="guide-meta">
+                        <span class="read-time">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            12 min read
+                        </span>
+                        <a href="mechanical-keyboards.html" class="read-guide">Read Guide <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Monitors -->
+            <article class="guide-card">
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&h=400&fit=crop" alt="Monitors" loading="lazy">
+                <div class="guide-content">
+                    <span class="guide-type">
+                        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Buying Guide
+                    </span>
+                    <h2><a href="monitors.html">Monitors: Resolution, Panels & Refresh Rates</a></h2>
+                    <p>Complete guide to buying a monitor. Understand resolution, panel types, refresh rates, and HDR for gaming, work, or creative use.</p>
+                    <div class="guide-features">
+                        <span class="guide-feature">Panel Types</span>
+                        <span class="guide-feature">Refresh Rate</span>
+                        <span class="guide-feature">Resolution</span>
+                        <span class="guide-feature">HDR</span>
+                    </div>
+                    <div class="guide-meta">
+                        <span class="read-time">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            14 min read
+                        </span>
+                        <a href="monitors.html" class="read-guide">Read Guide <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Wireless Earbuds -->
+            <article class="guide-card">
+                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=400&fit=crop" alt="Wireless Earbuds" loading="lazy">
+                <div class="guide-content">
+                    <span class="guide-type">
+                        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Buying Guide
+                    </span>
+                    <h2><a href="wireless-earbuds.html">Wireless Earbuds: ANC, Codecs & Fit</a></h2>
+                    <p>Everything about wireless earbuds. Understand ANC, audio codecs, battery life, and features to find earbuds that fit your lifestyle.</p>
+                    <div class="guide-features">
+                        <span class="guide-feature">ANC Explained</span>
+                        <span class="guide-feature">Audio Codecs</span>
+                        <span class="guide-feature">Fit Types</span>
+                        <span class="guide-feature">Battery Life</span>
+                    </div>
+                    <div class="guide-meta">
+                        <span class="read-time">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            10 min read
+                        </span>
+                        <a href="wireless-earbuds.html" class="read-guide">Read Guide <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Gaming Peripherals -->
+            <article class="guide-card">
+                <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=600&h=400&fit=crop" alt="Gaming Peripherals" loading="lazy">
+                <div class="guide-content">
+                    <span class="guide-type">
+                        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Buying Guide
+                    </span>
+                    <h2><a href="gaming-peripherals.html">Gaming Peripherals: Mice, Keyboards & Headsets</a></h2>
+                    <p>Complete guide to gaming peripherals. Learn what specs matter for mice, keyboards, and headsets to improve your gameplay.</p>
+                    <div class="guide-features">
+                        <span class="guide-feature">Gaming Mice</span>
+                        <span class="guide-feature">Keyboards</span>
+                        <span class="guide-feature">Headsets</span>
+                        <span class="guide-feature">Budget Picks</span>
+                    </div>
+                    <div class="guide-meta">
+                        <span class="read-time">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            15 min read
+                        </span>
+                        <a href="gaming-peripherals.html" class="read-guide">Read Guide <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- USB-C Hubs -->
+            <article class="guide-card">
+                <img src="https://images.unsplash.com/photo-1625723044792-44de16ccb4e9?w=600&h=400&fit=crop" alt="USB-C Hubs" loading="lazy">
                 <div class="guide-content">
                     <span class="guide-type">
                         <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                         Buying Guide
                     </span>
                     <h2><a href="usb-c-hubs.html">USB-C Hubs: The Complete Buying Guide</a></h2>
-                    <p>Everything you need to know about USB-C hubs and docking stations. Understand ports, power delivery, compatibility, and what to look for.</p>
+                    <p>Everything you need to know about USB-C hubs and docking stations. Understand ports, power delivery, and compatibility.</p>
                     <div class="guide-features">
-                        <span class="guide-feature">Port Types Explained</span>
+                        <span class="guide-feature">Port Types</span>
                         <span class="guide-feature">Power Delivery</span>
                         <span class="guide-feature">Compatibility</span>
                         <span class="guide-feature">Recommendations</span>
@@ -269,11 +362,6 @@
                     </div>
                 </div>
             </article>
-        </div>
-
-        <div class="coming-soon">
-            <h3>More Guides Coming Soon</h3>
-            <p>We're working on comprehensive buying guides for monitors, mechanical keyboards, audio equipment, and more. Check back soon!</p>
         </div>
     </div>
 
