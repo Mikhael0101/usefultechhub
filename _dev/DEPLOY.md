@@ -1,6 +1,6 @@
 # Useful Tech Hub - Deployment Guide
 
-Store ID: `usefultechhub-21`
+Store ID: `beautypro0cbb-20`
 
 ## Quick Deploy Options
 
@@ -72,14 +72,35 @@ Your site will be live at: `https://YOUR_USERNAME.github.io/usefultechhub/`
 ## File Structure
 
 ```
-money/
-├── index.html           # Homepage
-├── disclosure.html      # FTC-compliant disclosure
-├── generate-link.sh     # Affiliate link generator
-├── reviews/
-│   └── budget-wireless-earbuds.html
-└── guides/
-    └── usb-c-hubs.html
+usefultechhub/
+├── index.html              # Homepage
+├── about.html              # About page
+├── contact.html            # Contact page
+├── disclosure.html         # FTC-compliant disclosure
+├── privacy.html            # Privacy policy
+├── terms.html              # Terms of service
+├── 404.html                # Custom 404 page
+├── favicon.svg             # Site icon
+├── robots.txt              # Search engine directives
+├── sitemap.xml             # SEO sitemap
+├── styles/
+│   └── common.css          # Shared header/footer styles
+├── reviews/                # Product reviews (13 articles)
+│   ├── index.html
+│   ├── gaming-mice.html
+│   ├── gaming-headsets.html
+│   └── ...
+├── guides/                 # Buying guides (5 articles)
+│   ├── index.html
+│   ├── usb-c-hubs.html
+│   └── ...
+├── blog/                   # Blog posts (6 articles)
+│   ├── index.html
+│   └── ...
+└── _dev/                   # Development tools (not public)
+    ├── DEPLOY.md
+    ├── generate-link.sh
+    └── update-layout.sh
 ```
 
 ## Next Steps
