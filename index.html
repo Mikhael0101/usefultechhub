@@ -502,6 +502,73 @@
             color: white;
         }
 
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
+            padding: 80px 0;
+        }
+
+        .newsletter-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .newsletter p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input[type="email"] {
+            flex: 1;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .newsletter-form input[type="email"]:focus {
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+        }
+
+        .newsletter-form button {
+            padding: 16px 32px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: #1e293b;
+            transform: translateY(-2px);
+        }
+
+        .newsletter-note {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            margin-top: 16px;
+        }
+
         .footer-bottom {
             border-top: 1px solid #334155;
             padding-top: 32px;
@@ -544,6 +611,9 @@
             .hero-stats { flex-direction: column; gap: 24px; }
             .article-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-form button { width: 100%; }
+            .newsletter h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -934,6 +1004,20 @@
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <h2>Get the Best Deals in Your Inbox</h2>
+                <p>Subscribe for weekly tech deals, new reviews, and buying tips. No spam, unsubscribe anytime.</p>
+                <form class="newsletter-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p class="newsletter-note">Join 1,000+ readers. We respect your privacy.</p>
             </div>
         </div>
     </section>
