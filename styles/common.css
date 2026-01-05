@@ -30,6 +30,13 @@ body {
     padding: 0 24px;
 }
 
+/* Force header and footer containers to always be 1200px regardless of page styles */
+.site-header .container,
+.site-footer .container {
+    max-width: 1200px !important;
+    padding: 0 24px !important;
+}
+
 /* Header */
 .site-header {
     background: var(--secondary);
