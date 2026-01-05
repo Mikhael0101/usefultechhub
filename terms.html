@@ -12,21 +12,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/common.css">
     <title>Terms of Service - Useful Tech Hub</title>
     <meta name="description" content="Terms of Service for Useful Tech Hub. Read about the terms and conditions for using our website.">
     <meta name="robots" content="noindex">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; line-height: 1.8; color: #333; background: #f8fafc; }
-
-        /* Header */
-        header { background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white; padding: 20px 0; }
-        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: white; }
-        nav a { color: rgba(255,255,255,0.9); text-decoration: none; margin-left: 24px; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: white; }
 
         .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
         h1 { font-size: 2.25rem; margin-bottom: 10px; color: #0f172a; }
@@ -46,29 +41,34 @@
         .section { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin: 24px 0; }
         .section h3 { margin-top: 0; }
 
-        footer { background: #1e293b; color: #94a3b8; padding: 40px 20px; text-align: center; margin-top: 60px; }
-        footer a { color: #a5b4fc; text-decoration: none; }
-
         @media (max-width: 640px) {
-            .header-container { flex-direction: column; gap: 16px; }
-            nav a { margin: 0 12px; }
             h1 { font-size: 1.75rem; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">Useful Tech Hub</a>
-            <nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <div class="logo-text">
+                    <h1>Useful Tech Hub</h1>
+                    <span>Honest Reviews</span>
+                </div>
+            </a>
+            <nav class="main-nav">
                 <a href="index.html">Home</a>
+                <a href="reviews/">Reviews</a>
+                <a href="guides/">Guides</a>
                 <a href="blog/">Blog</a>
                 <a href="about.html">About</a>
-                <a href="disclosure.html">Disclosure</a>
             </nav>
         </div>
     </header>
 
+    <main>
     <div class="container">
         <h1>Terms of Service</h1>
         <p class="last-updated">Last Updated: January 5, 2026</p>
@@ -195,15 +195,58 @@
         <p><strong>Email:</strong> <a href="mailto:usefultechhub@gmail.com">usefultechhub@gmail.com</a></p>
         <p>Or visit our <a href="contact.html">Contact page</a>.</p>
     </div>
+    </main>
 
-    <footer>
-        <p>&copy; 2026 Useful Tech Hub. All rights reserved.</p>
-        <p style="margin-top: 10px;">
-            <a href="disclosure.html">Affiliate Disclosure</a> ·
-            <a href="privacy.html">Privacy Policy</a> ·
-            <a href="terms.html">Terms of Service</a> ·
-            <a href="about.html">About</a>
-        </p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Useful Tech Hub</h1>
+                        </div>
+                    </a>
+                    <p>Independent tech reviews and buying guides. We test products so you don't have to waste money on the wrong gear.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Reviews</h4>
+                    <ul>
+                        <li><a href="reviews/budget-wireless-earbuds.html">Wireless Earbuds</a></li>
+                        <li><a href="reviews/mechanical-keyboards-beginners.html">Keyboards</a></li>
+                        <li><a href="reviews/gaming-mice.html">Gaming Mice</a></li>
+                        <li><a href="reviews/gaming-headsets.html">Headsets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="guides/usb-c-hubs.html">USB-C Hubs</a></li>
+                        <li><a href="reviews/monitors-desk-setup.html">Desk Setup</a></li>
+                        <li><a href="reviews/portable-chargers-power-banks.html">Power Banks</a></li>
+                        <li><a href="reviews/webcams-microphones.html">Webcams</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Useful Tech Hub. All rights reserved.</p>
+                <div class="affiliate-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>Amazon Associates Member</span>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
